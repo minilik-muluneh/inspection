@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .no{
+            list-style: none;
+            /* background-color: red; */
+            margin-left: 0;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body >
+    <div style="text-align: center;" >
+        <h1>Drainage system inspection check list</h1>
+        <select name="" id="drain" >
+            <option value="select ">Select drainage component</option>
+            <option value="surface_drainage">surface drainage</option>
+            <option value="subsurface_drainage">subsurface drainage</option>
+            <option value="side_ditches">Side ditches</option>
+            <option value="Stream_crossing">Stream crossing</option>
+        </select>
+    </div>
+
+    <div class="container">
+
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>no.</th>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ol>
+                    {% for i in ranges%}
+                    <li>
+                        <tr>
+                            <td>{{i.one}}</td>
+                            <td>{{i.two}}</td>
+                            <td>{{i.three}}</td>
+                            <td>{{i.four}}</td>
+                        </tr>
+                    </li>
+                    {%endfor%}
+                </ol>
+            </tbody>
+            <tfoot>
+                
+            </tfoot>
+           </table>
+    </div>
+    
+    <p></p>
+    <h1>hello</h1>
+    <button onclick='show()'> show </button>
+
+    <h2>0</h2>
+    <button onclick='addCount()'>count</button>
+
+    <!-- <form action="" method="post">
+        {% csrf_token%}
+        <input type="text" name="" id="name-value" placeholder="Name">
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <h3>Color</h3>
+    <select name="" id="">
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+    </select>
+    <!-- <form action="" method="post">
+        {%csrf_token%}
+        <div >
+            <label for="Title">Title</label>
+            <br>
+            {{form.title}}
+        </div>
+        <div >
+            <label for="Amount">amount</label>
+            <br>
+            {{form.amount}}
+        </div>
+        <div>
+            <label for="catagory">Catagory</label>
+            <br>
+            {{form.catagory}}
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form> -->
+   
+    <script type="text/javascript" src="{% static 'inspection/home.js' %}"></script>
+</body>
+</html>
