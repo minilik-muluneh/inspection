@@ -2,9 +2,9 @@
 function show() {
     const varable=document.querySelector('h1');
     if (varable.innerHTML === 'good bye !!!'){
-        varable.innerHTML='hello!!!';
+        varable.innerHTML='hello world!!!';
     }else{
-        varable.innerHTML = 'good bye !!!'
+        varable.innerHTML = 'good bye world!!!'
     }
 }
 
